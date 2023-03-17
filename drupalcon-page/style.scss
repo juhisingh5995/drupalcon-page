@@ -1,0 +1,835 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+html {
+  font-size: 16px;
+}
+
+
+// --header--
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 100px;
+  width: 100%;
+  box-shadow: 5px 5px 5px #a5a5a54d;
+    z-index: 9999;
+    transition: all .6s ease-in-out;
+    position: fixed;
+    background-color: #fff;
+
+  &__logo {
+    width: 100px;
+    height: 50px;
+  }
+
+  &__hamburger {
+    width: 60px;
+    height: 50px;
+  }
+}
+
+// banner container
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  // width: 80%;
+}
+.banner{
+  padding-top: 100px;
+}
+
+.container_banner {
+  display: flex;
+  padding-bottom: 200px;
+  flex-wrap: wrap;
+
+  &__text {
+    color: #3787c8;
+    padding-top: 60px;
+    padding-left: 77px;
+    width: 50%;
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__date {
+    width: 50%;
+    color: #3787c8;
+    padding-top: 160px;
+
+    h2 {
+      position: relative;
+      padding-left: 40px;
+      font-size: 36px;
+      font-weight: 400;
+
+      &::before {
+        content: "";
+        width: 46px;
+        height: 3px;
+        background-color: #e14b32;
+        position: absolute;
+        top: -4px;
+        left: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// media query//
+@media (max-width: 805px) {
+  .container_banner__text {
+    width: 100%;
+    padding:0 0 0 0 ;
+  }
+
+  .container_banner__date {
+    width: 100%;
+
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .container_banner__text {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .container_banner__date {
+    font-size: 24px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container_banner__text {
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .container_banner__date {
+    font-size: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+//about section//
+.about_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -84px;
+
+  &__drupalcon {
+    width: 50%;
+
+    h3 {
+      color: #555f64;
+      font-size: 45px;
+      padding-left: 60px;
+      padding-right:60px;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    border-radius: 30px;
+    padding-left: 0px;
+    position: relative;
+    // about_container__image--redbox {
+    //   width: 220px;
+    //   height: 220px;
+    //   box-shadow: 0px 3px 6px #00000029;
+    //   border-radius: 30px;
+    //   position: absolute;
+    //   background: #e14b32;
+    //   left: 0;
+    //   bottom: 5px;
+    //   z-index: -1;
+    //   transition: all 0.3s ease-in-out;
+    // }
+
+
+
+    // &__image:hover about_container__image--redbox {
+    //   left: -30px;
+    //   bottom: -30px;
+    // }
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .about_container {
+    margin-top: -142px;
+  }
+
+  .about_container__drupalcon {
+    padding-left: 10px; 
+    padding-right:10px;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  .about_container__image {
+    width: 95%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+}
+
+// paragraph
+.details__para {
+  max-width: 50%;
+  margin: 0 auto;
+  line-height: 26px;
+  font-size: 20px;
+  padding-top: 62px;
+  opacity: 0.5;
+}
+
+// background
+.bg-image {
+  background-image: url(images/Image.png);
+  height: 418px;
+  position: relative;
+  margin-top: 52px;
+
+  &__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+      color: #fff;
+      font-size: 45px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+.best_practices {
+  padding-top: 7.5rem;
+  padding-bottom: 6.25rem;
+
+  &__text {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #e14b32;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
+  }
+
+  &__schedule {
+    display: flex;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      font-size: 1.25rem;
+      color: #555f64;
+      padding-top: 5px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    img {
+      width: 24px;
+      height: 28px;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .best_practices__schedule {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .best_practices__schedule {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  .best_practices__text {
+    font-size: 1rem;
+  }
+
+  .container_banner__date {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 31px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.scholarships {
+  max-width: 100%;
+
+  h4 {
+    text-align: center;
+    color: #555f64;
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-bottom: 4rem;
+  }
+}
+
+// introduction
+.introduction {
+  .employee_introduction {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    &__about {
+      position: relative;
+    }
+
+    &__image {
+      border: 2px solid #3787c8;
+      border-radius: 30px;
+      width: 240px;
+      height: 240px;
+
+      img {
+        margin: 24px 0 0 18px;
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      margin-left: 8rem;
+      transform: translateX(-50%);
+
+      .test {
+        height: 30px;
+      }
+    }
+
+    &__detail {
+      h3 {
+        text-align: center;
+        color: #3787c8;
+        padding-top: 36px;
+      }
+
+      p {
+        text-align: center;
+        color: #555f64;
+        opacity: 0.7;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .introduction {
+    margin-top: -59px;
+  }
+
+  .employee_introduction__image {
+    margin-top: 24px;
+  }
+
+  .about__osl_heading {
+    font-size: 2.2rem;
+  }
+}
+
+.details__para {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 640px) {
+  .details__para p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+// more on
+
+.more_on {
+  background-color: #e0ffff;
+  width: 100%;
+  position: relative;
+  margin-top: 4rem;
+  padding-bottom: 94px;
+
+  .scholarship {
+    text-align: center;
+
+    padding-top: 62px;
+
+    h4 {
+      text-align: center;
+      font-size: 45px;
+      color: #455a64;
+    }
+
+    p {
+      text-align: center;
+      width: 56%;
+      opacity: 0.5;
+      font-size: 20px;
+      margin-top: 15px;
+      margin-left: 15rem;
+      margin-right:15rem;
+
+    }
+  }
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+
+  &__text {
+    width: 50%;
+
+    h3 {
+      color: #555f64;
+      padding: 154px 0 0 100px;
+      font-size: 25px;
+    }
+
+    p {
+      margin: 24px 0 0 100px;
+      opacity: 0.6;
+      font-size: 20px;
+    }
+  }
+
+  &__image {
+    border-radius: 30px;
+    padding-top: 121px;
+    padding-left: 116px;
+    padding-right: 116px;
+    width: 50%;
+    height: 360px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 910px) {
+  .notes__text {
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+
+  .notes__image {
+    width: 100%;
+    text-align: center;
+    padding-left:0px;
+    padding-top:0px;
+  }
+
+  .notes {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// about
+.about {
+  &__osl_heading {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 6px;
+    margin-top: 32px;
+
+    .sense {
+      color: #df4e31;
+      margin-left: -14px;
+      margin-right:-14px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .about__osl_heading {
+    font-size: 2rem;
+  }
+
+  .more_on .scholarship p {
+    margin-left: 5rem;
+
+  }
+
+  .notes__text h3 {
+
+    padding: 154px 0 0 0px;
+  }
+
+  .notes__text p {
+    margin: 24px 0 0 0px;
+  }
+
+  .notes__image {
+    padding-left: 0px;
+  }
+  
+.information-box__shadow .information_box__yellow {
+  display: none;
+}
+}
+  
+
+// information
+.information-box {
+  max-width: 650px;
+  margin: 40px auto 20px;
+
+  &__shadow {
+    background: #ffffff;
+    box-shadow: 0px 8px 19px #00000029;
+    border-radius: 30px;
+    position: relative;
+
+    p {
+      line-height: 1.6;
+      padding: 40px;
+
+      color: #555f64;
+      font-size: 1.25rem;
+      text-align: left;
+      opacity: 0.8;
+      font-weight: 400;
+    }
+
+    .information_box__yellow {
+      z-index: -1;
+      width: 190px;
+      height: 190px;
+      background-color: #faaf40;
+      border-radius: 30px;
+      position: absolute;
+      top: 58%;
+      left: 76%;
+    }
+  }
+}
+
+.top_footer {
+  display: flex;
+
+  &__logo {
+    margin-left: 48px;
+    margin-top: 58px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 63px;
+    margin-top: -63px;
+    margin-left: 170px;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 32px;
+    color: #a5a5a5;
+    font-size: 18px;
+
+    &:hover {
+      color: #3887c8;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .top_footer__img {
+    display: none;
+  }
+
+  .top_footer {
+    .links {
+      width: 100%;
+
+      ul {
+        width: 80%;
+      }
+    }
+  }
+}
+
+// footer2
+.middle_footer {
+  .services {
+    width: 100%;
+    background: #555f64;
+    padding: 50px 0px;
+
+    h2 {
+      font: normal normal bold 20px/24px Montserrat;
+      letter-spacing: 0.1px;
+      color: #faaf41;
+      text-align: center;
+    }
+
+    &__detail {
+      ul {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-top: 22px;
+        text-align: center;
+        justify-content: center;
+
+        li {
+          margin: 0px 15px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        text-align: center;
+        width: 150px;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .middle-footer ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    li {
+      width: 100%;
+    }
+  }
+}
+
+// bottom footer
+
+.bottom_footer {
+  .about_enquery {
+    position: relative;
+
+    &__trademark {
+      h5 {
+        font-size: 10px;
+        writing-mode: vertical-rl;
+
+        transform: rotateZ(181deg);
+        right: 30px;
+        height: 278px;
+        top: -34px;
+        opacity: 0.7;
+        position: absolute;
+        right: 30px;
+      }
+    }
+
+    &__bussiness {
+      margin-bottom: 46px;
+
+      h1 {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-top: 34px;
+        color: #000;
+        font-weight: bold;
+      }
+    }
+
+    &__numbers {
+      display: flex;
+      justify-content: space-around;
+      font-size: 26px;
+      letter-spacing: 1.7px;
+      color: #000000;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    &__careers {
+      h3 {
+        text-align: center;
+        font: normal normal normal 12px/40px Montserrat;
+        letter-spacing: 1.89px;
+        color: #000000;
+        opacity: 0.7;
+      }
+
+      p {
+        font: normal normal bold 12px/15px Montserrat;
+        color: #555f64;
+        opacity: 1;
+        text-align: center;
+      }
+
+      .about_enquery__social_media {
+        font: normal normal bold 12px/15px Montserrat;
+        opacity: 1;
+        text-align: center;
+        word-spacing: 12px;
+        padding: 7px;
+      }
+    }
+  }
+
+  @media (max-width: 910px) {
+    .middle_footer .services__detail ul {
+      display: block;
+    }
+
+    .information_box__yellow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 675px) {
+    .bottom_footer .about_enquery__numbers {
+      display: block;
+    }
+
+    .top_footer ul {
+      display: block;
+    }
+
+  }
+}
+@media (max-width: 576px) {
+  .top_footer{
+    display: block;
+  .top_footer__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    img{
+      &.footer{
+        width: 100px;
+      }
+    }
+
+    .top_footer__icons{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding-top:12px;
+
+    
+    }
+  }
+  ul{
+
+    display: block;
+    margin: 0;
+  }
+}
+.middle_footer .services__detail ul {
+  display: block;
+}
+
+.middle_footer .services {
+  margin-top:24px;
+}
+.bottom_footer .about_enquery__numbers {
+  display: block;}
+
+  .details__para {
+    max-width: 100%;
+  }
+  .more_on .scholarship p {
+    text-align: center;
+    max-width: 100%;}
+
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px){
+    .notes__image{
+      padding: 0PX;
+      margin: 0PX;
+      width: 100%;
+
+    }
+    .notes__text p { 
+      margin: 0 0 44px 0px;
+
+    }
+    .notes__text h3{
+      padding: 48px 0 6px 0;
+    }
+    .container_banner__text {
+      font-size: 2rem;
+    }
+    .container_banner__date h2 {
+      
+      font-size: 2rem;
+     
+      margin-top: 4rem;    }
+    .details__para{
+      margin: 0px;
+      max-width: 100%;
+    }
+    .more_on .scholarship p{
+      width: 100%;
+      margin: 0px;
+    }
+    .information-box__shadow .information_box__yellow{
+      display: none;
+    }
+  }
